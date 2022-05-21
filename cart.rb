@@ -55,7 +55,7 @@ class Cart
 end
 
 a = Cart.new
-a.scan('SR1', 1)
-a.scan('CF1', 1)
-a.scan('GR1', 3)
+a.scan('SR1', 3)
+#a.scan('CF1', 1)
+a.scan('GR1', 1)
 print a.total
