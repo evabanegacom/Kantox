@@ -4,7 +4,7 @@ class Cart
         @counter = 0
     end
     
-    def addItem(product_code, qty, price=0)
+    def scan(product_code, qty, price=0)
         price = 0
         appearance = 0
         coffee = 0
@@ -37,7 +37,7 @@ class Cart
         @cartitems.push([product_code, qty, price])
     end
     
-    def scan
+    def total
         puts("There are currently " + @counter.to_s + " items in the cart.")
         @cartitems.each do |item|
             product_code = item[0]
@@ -51,7 +51,7 @@ class Cart
 end
 
 a = Cart.new
-a.addItem('SR1', 1)
-a.addItem('CF1', 3)
-a.addItem('GR1', 1)
-print a.scan
+a.scan('SR1', 1)
+a.scan('CF1', 3)
+a.scan('GR1', 1)
+print a.total
